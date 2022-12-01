@@ -37,6 +37,7 @@ def ujrakezdes():
 def vege():
     button1["command"] = lambda: ujrakezdes()
     button1["text"]="Újrakezdés"
+    talaltSzo.place_forget()
     button1.place(x=130, y=370, width=70, height=45)
     szoveg["text"]="Vesztettél.., a szó: '"+szo+"' volt."
     szoveg.place(x=20, y=300, width=300, height=20)
@@ -138,7 +139,7 @@ if __name__ == '__main__':
     c = Canvas(ablak, width=200, height=250)
     c.pack()
     beker = StringVar()
-    entryBox = Entry(ablak, textvariable=ablak, border="2", font=("Arial", 20))
+    entryBox = Entry(ablak, textvariable=beker, border="2", font=("Arial", 20))
     entryBox.place(x=70, y=320, width=200, height=37)
 
     szoveg = Label(ablak, text='Adjon meg egy szót, maximum 10 betű lehet', bg='white', fg='black', font=("Arial", 10))
